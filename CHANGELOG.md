@@ -5,7 +5,7 @@ This changelog is according to [Keep a Changelog](http://keepachangelog.com).
 All notable changes to this project will be documented in this file.
 We will follow [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [2.0.0] = 2026-02-19
 
 ### Added
 
