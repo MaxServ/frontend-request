@@ -56,4 +56,3 @@ analysis and suggestions for improving the page's SEO and readability.
    :hidden:
 
    Sitemap
-   genindex
