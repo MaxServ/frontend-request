@@ -23,9 +23,8 @@ class FrontendRequest
     {
         $request = $this->requestFactory->createRequest('GET', $context->getUrl());
 
-        $event = $this->eventDispatcher->dispatch(
-            new ModifyRequestEvent($request, $context)
-        );
+        $event = new ModifyRequestEvent($request, $context);
+        $this->eventDispatcher->dispatch($event);
 
         try {
             $response = $this->client->sendRequest($event->getRequest());
