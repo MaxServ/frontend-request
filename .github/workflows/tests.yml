@@ -11,18 +11,9 @@ jobs:
       fail-fast: false
       matrix:
         php: [ '8.2', '8.3', '8.4', '8.5' ]
-        typo3: [ '12', '13' ]
+        typo3: [ '12', '13', '14' ]
         experimental: [false]
         composerInstall: [ 'composerInstallLowest', 'composerInstallHighest' ]
-        include:
-          - typo3: '14'
-            php: '8.5'
-            composerInstall: 'composerInstallLowest'
-            experimental: true
-          - typo3: '14'
-            php: '8.5'
-            composerInstall: 'composerInstallHighest'
-            experimental: true
 
     steps:
       - name: Checkout

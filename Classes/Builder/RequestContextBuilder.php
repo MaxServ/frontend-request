@@ -32,10 +32,9 @@ class RequestContextBuilder
         }
         $url = $this->generateUri($site, $parameters);
 
-        /** @var ModifyUrlEvent $event */
-        $event = $this->eventDispatcher->dispatch(
-            new ModifyUrlEvent($url, $site, $parameters)
-        );
+        $event = new ModifyUrlEvent($url, $site, $parameters);
+        $this->eventDispatcher->dispatch($event);
+
         return new RequestContext(
             $event->getUrl(),
             $site,
